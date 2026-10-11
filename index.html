@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | Product Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" data-home>ShopEase<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#" data-home>Home</a>
+      <a href="#products" id="productsNav">Products</a>
+      <button class="nav-button" id="cartNav">Cart <span class="cart-count" id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homeView">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR EVERYDAY MARKETPLACE</p>
+          <h1>Find something<br><span>you’ll love.</span></h1>
+          <p class="hero-description">Browse useful tech, wardrobe favourites and thoughtful home finds—all in one place.</p>
+          <a class="hero-button" href="#products">Explore products <span>→</span></a>
+          <div class="hero-note"><span class="note-dot"></span> Good finds for everyday life</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div><div class="art-card card-back"><span>GOOD</span><b>THINGS</b><small>for everyday</small></div>
+          <div class="art-card card-front"><span class="bag-handle"></span><div class="bag-face">S</div><small>SHOP HAPPY</small></div>
+          <div class="floating-star">✳</div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="products">
+        <div class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Explore the collection</h2><p class="section-subtitle">Find a favourite for every part of your day.</p></div><div class="result-count" id="resultCount">8 products</div></div>
+        <div class="catalog-controls">
+          <div class="category-tabs" role="group" aria-label="Filter by category">
+            <button class="category-btn active" data-category="All Products">All Products</button>
+            <button class="category-btn" data-category="Electronics">Electronics</button>
+            <button class="category-btn" data-category="Clothing">Clothing</button>
+            <button class="category-btn" data-category="Home & Decor">Home &amp; Decor</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="searchInput" placeholder="Search products..." aria-label="Search products"></label>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <p class="empty-message" id="emptyMessage" hidden>No products found. Try another search or category.</p>
+      </section>
+    </section>
+
+    <section class="page-section" id="detailView" hidden>
+      <button class="back-button" data-home>← Back to products</button>
+      <div id="detailContent"></div>
+    </section>
+
+    <section class="page-section" id="cartView" hidden>
+      <button class="back-button" data-home>← Continue shopping</button>
+      <div class="section-heading"><div><p class="eyebrow">YOUR BAG</p><h2>Shopping cart</h2><p class="section-subtitle">Review your items before checkout.</p></div></div>
+      <div id="cartContent"></div>
+    </section>
+  </main>
+
+  <footer><span class="footer-logo">ShopEase<span>.</span></span><span>Student project · Interactive Product Catalog</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
